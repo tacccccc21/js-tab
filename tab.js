@@ -21,10 +21,17 @@
       const $this = e.target;
       const targetVal = $this.dataset.nav;
 
+      // 対象外のnav,content全て一旦リセットさせる
+      let index = 0;
+      while(index < $nav.length){
+        $content[index].style.display = 'none';
+        index++;
+      }
+
       // 対象のコンテンツをアクティブ化させる
       $tab.querySelectorAll('[data-content= "' + targetVal + '"]')[0].style.display = 'block';
       $nav[targetVal].classList.add('is-active');
-      console.log('$nav[targetVal.classList]', $nav[targetVal.classList]);
+      
   };
   
   // 全nav要素に対して関数を適応
