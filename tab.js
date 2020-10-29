@@ -25,6 +25,7 @@
       let index = 0;
       while(index < $nav.length){
         $content[index].style.display = 'none';
+        $nav[index].classList.remove('is-active')
         index++;
       }
 
