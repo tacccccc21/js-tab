@@ -10,18 +10,20 @@
   
   // 初期化
   const init = () => {
+    
     $content[0].style.display = 'block';
+    
   };
   init();
 
   // クリックしたら怒るイベント
   const handleClick = (e) => {
+    console.log(e);
     e.preventDefault();
     
-    
     // クリックされたnavとそのdataを取得
-      const $this = e.target;
-      const targetVal = $this.dataset.nav;
+  const $this = e.target;
+  const targetVal = $this.dataset.nav;
 
       // 対象外のnav,content全て一旦リセットさせる
       let index = 0;
